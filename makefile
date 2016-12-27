@@ -18,7 +18,7 @@ GTKLIB=`pkg-config --cflags --libs gtk+-3.0`
  
 # linker
 LD=gcc
-LDFLAGS=$(PTHREAD) $(GTKLIB) 
+LDFLAGS=$(PTHREAD) $(GTKLIB)
  
 OBJS=    main.o
  
