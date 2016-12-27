@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.20.0 -->
+<interface>
+  <requires lib="gtk+" version="3.10"/>
+  <object class="GtkWindow" id="window_main">
+    <property name="can_focus">False</property>
+    <property name="default_width">450</property>
+    <property name="default_height">250</property>
+    <signal name="destroy" handler="on_window_main_destroy" swapped="no"/>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="lbl_desc">
+            <property name="width_request">509</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Welcome to NAND Manager. Click read to read NAND
+from SD and write to write it to SD. </property>
+            <property name="use_markup">True</property>
+            <property name="width_chars">0</property>
+            <property name="max_width_chars">0</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_status">
+            <property name="width_request">169</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_left">65</property>
+            <property name="margin_right">65</property>
+            <property name="label" translatable="yes">Please choose an operation</property>
+          </object>
+          <packing>
+            <property name="x">101</property>
+            <property name="y">208</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_read">
+            <property name="label" translatable="yes">Read</property>
+            <property name="width_request">100</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_btn_read_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">23</property>
+            <property name="y">232</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_write">
+            <property name="label" translatable="yes">Write</property>
+            <property name="width_request">100</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_btn_write_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">387</property>
+            <property name="y">232</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFileChooserButton" id="sav_folder">
+            <property name="width_request">231</property>
+            <property name="height_request">47</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Select the path to save the image files.</property>
+            <property name="action">select-folder</property>
+            <property name="title" translatable="yes">Select Location</property>
+          </object>
+          <packing>
+            <property name="x">23</property>
+            <property name="y">103</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+  </object>
+</interface>
