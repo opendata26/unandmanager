@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         arg_out_drive = argv[2];
     }
     else {
-        printf("One argument expected.\n");
+        printf("Two arguments expected.\n");
         exit(0);
     }
 
