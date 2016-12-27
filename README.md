@@ -17,3 +17,6 @@ Run make in the projects directory.
 Windows : No  
 Linux : Yes  
 MacOS: Maybe  
+
+### Format
+The format is a raw copy of sector 2 to sector 64423168 
