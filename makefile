@@ -1,32 +1,23 @@
-# change application name here (executable output name)
-TARGET=nand_manager
- 
-# compiler
-CC=gcc
-# debug
-DEBUG=-g
-# optimisation
-OPT=-O0
-# warnings
-WARN=-Wall
- 
-PTHREAD=-pthread
- 
-CCFLAGS=$(DEBUG) $(OPT) $(WARN) $(PTHREAD) -pipe
- 
-GTKLIB=`pkg-config --cflags --libs gtk+-3.0`
- 
-# linker
-LD=gcc
-LDFLAGS=$(PTHREAD) $(GTKLIB)
- 
-OBJS=    main.o
- 
-all: $(OBJS)
-	$(LD) -o $(TARGET) $(OBJS) $(LDFLAGS)
-    
-main.o: main.c
-	$(CC) -c $(CCFLAGS) main.c $(GTKLIB) -o main.o
-    
+TARGET = unandmgr
+LIBS = -lm 
+CFLAGS = -g -Wall
+
+.PHONY: default all clean
+
+default: $(TARGET)
+all: default
+
+OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))
+HEADERS = $(wildcard *.h)
+
+%.o: %.c $(HEADERS)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+.PRECIOUS: $(TARGET) $(OBJECTS)
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
+
 clean:
-	rm -f *.o $(TARGET)
+	-rm -f *.o
+	-rm -f $(TARGET)
