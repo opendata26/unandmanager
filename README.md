@@ -1,4 +1,4 @@
-# Nand-Manager  
+# UNandManager  
 A cross platform tool to backup rednand from your sdcard.  
 
 ### Running
