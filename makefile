@@ -21,3 +21,10 @@ $(TARGET): $(OBJECTS)
 clean:
 	-rm -f *.o
 	-rm -f $(TARGET)
+
+prefix=/usr
+
+install: unandmgr
+	install -m 0755 unandmgr $(prefix)/bin
+
+.PHONY: install
