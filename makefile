@@ -25,6 +25,6 @@ clean:
 prefix=/usr
 
 install: unandmgr
-	install -m 0755 unandmgr $(prefix)/bin
+	install -m 0755 unandmgr $(DESTDIR)$(prefix)/bin
 
 .PHONY: install
