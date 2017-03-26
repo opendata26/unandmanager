@@ -16,7 +16,7 @@ to write ~/rednand.img onto the sd on a 32GB wiiu
 
 ### Compiling    
 Run  ```make ``` in the projects directory.  
-
+or download it from the AUR at https://aur.archlinux.org/packages/unandmanager/
 ### Support   
 Windows : No  
 Linux : Yes  
